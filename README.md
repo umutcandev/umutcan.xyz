@@ -20,6 +20,22 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Telegram Integration
+
+This project includes integration with Telegram for contact form submissions. To set up:
+
+1. Create a new Telegram bot using [BotFather](https://t.me/BotFather) and obtain your API token
+2. Get your Telegram Chat ID using [@userinfobot](https://t.me/userinfobot)
+3. Copy the `.env.local.example` file to `.env.local`
+4. Add your Telegram Bot Token and Chat ID to the `.env.local` file:
+
+```
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+TELEGRAM_CHAT_ID=your_telegram_chat_id_here
+```
+
+All contact form submissions will now be sent to your Telegram account.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
