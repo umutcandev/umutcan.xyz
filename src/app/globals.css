@@ -13,6 +13,7 @@ html:not(.light):not(.dark) body {
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-caudex: var(--font-caudex);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -128,5 +129,8 @@ html:not(.light):not(.dark) body {
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-geist-sans);
     font-weight: normal;
+  }
+  .font-caudex {
+    font-family: var(--font-caudex);
   }
 }

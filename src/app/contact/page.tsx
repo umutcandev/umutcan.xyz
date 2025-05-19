@@ -108,7 +108,7 @@ export default function Contact() {
   return (
     <div className="w-full flex justify-center">
       <div className="max-w-[650px] w-full px-4">
-        <h1 className="text-3xl font-normal mb-4 mt-8">Contact</h1>
+        <h1 className="text-3xl font-caudex mb-4 mt-8">Contact</h1>
         
         <p className="text-sm leading-relaxed text-muted-foreground mb-8">
           Let&apos;s talk about your project, collaboration opportunities, or just exchange ideas.

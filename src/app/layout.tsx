@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono, Caudex } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -18,6 +18,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
 });
+
+const caudex = Caudex({
+  variable: "--font-caudex",
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "Umutcan's Portfolio",
@@ -83,11 +96,6 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
     creator: "@umutcandev",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
   verification: {
     google: "your-google-site-verification",
     yandex: "your-yandex-verification",
@@ -108,7 +116,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground font-sans flex flex-col min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} ${caudex.variable} antialiased bg-background text-foreground font-sans flex flex-col min-h-screen`}
       >
         <Script
           id="theme-script"

@@ -1,6 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
-import ExpandableSection from "@/components/ExpandableSection";
-import { TooltipLink } from "@/components/TooltipLink";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export default function Home() {
   return (
@@ -8,7 +12,7 @@ export default function Home() {
       <div className="max-w-[650px] w-full px-4">
         <div className="mb-8 mt-8">
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
-            <h1 className="text-3xl font-normal">Welcome to my portfolio</h1>
+            <h1 className="text-3xl font-normal font-caudex">Welcome back</h1>
             <div className="flex items-center gap-1.5 bg-green-100 dark:bg-green-950/50 text-green-800 dark:text-green-400 px-2.5 py-1 rounded-full text-xs w-fit">
               <span className="relative flex h-2 w-2 mr-1">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -20,24 +24,49 @@ export default function Home() {
         </div>
         
         <p className="text-sm leading-relaxed mb-4">
-          I&apos;m Umutcan, a university student passionate about UI design and front-end development. 
-          In my spare time, I enjoy working with Figma to create engaging user interfaces.
-        </p>
-        
+        My name is Umutcan. I focused on UI design and front-end development. I use Figma to build clear user interfaces.
+        In the past, I developed and sold interactive news websites that saw significant growth in daily visitors. 
+       </p>
+
         <p className="text-sm leading-relaxed mb-4">
-          My portfolio includes interactive news websites that I&apos;ve developed, owned, and sold, 
-          significantly increasing daily visitor numbers. I also provide software and graphic design services on webmaster forums, with more than 100 positive trade ratings.
-          I also contribute to the <TooltipLink text="FlarumTR" tooltipContent="https://flarumtr.com/u/Can" href="https://flarumtr.com/u/Can" /> ecosystem.
+        On webmaster forums, I&apos;ve completed over a hundred trades in software and graphic design. I also contribute to the{" "}
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <a href="https://flarumtr.com/u/Can" className="font-caudex hover:text-foreground transition-colors underline">Flarum Türkiye</a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Flarum Türkiye Community</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider> community.
+        Currently, I&apos;m expanding my knowledge into DevOps, particularly Linux systems and server management.
+        Always learning.
         </p>
-        
+
         <p className="text-sm leading-relaxed">
-          I&apos;m enthusiastic about expanding my knowledge in DevOps processes, particularly 
-          Linux system administration and server management.
+        I&apos;ve been a{" "}
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <a href="https://izciforum.com/uyeler/umutcan.1/" className="font-caudex hover:text-foreground transition-colors underline">scout leader</a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Scout Leader Profile</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider> for over 7 years, which helped me build strong leadership and teamwork skills. I&apos;m also passionate about{" "}
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <a href="https://www.qrz.com/db/TA4RAP" className="font-caudex hover:text-foreground transition-colors underline">amateur radio</a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Amateur Radio Operator Profile</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>, where I connect with people around the world and learn about communication technologies. 
         </p>
-        
-        <div className="w-full text-left">
-          <ExpandableSection />
-        </div>
 
         <div className="mt-6">
           <svg 
@@ -57,15 +86,15 @@ export default function Home() {
           </svg>
           
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-muted-foreground">
-            <a href="https://x.com/umutcandev" className="flex items-center hover:text-foreground transition-colors">
+            <a href="https://x.com/umutcandev" className="flex items-center hover:text-foreground transition-colors font-caudex">
               <ArrowUpRight className="w-3.5 h-3.5 mr-1.5" />
               <span>follow me on x</span>
             </a>
-            <a href="https://github.com/umutcandev" className="flex items-center hover:text-foreground transition-colors">
+            <a href="https://github.com/umutcandev" className="flex items-center hover:text-foreground transition-colors font-caudex">
               <ArrowUpRight className="w-3.5 h-3.5 mr-1.5" />
               <span>let&apos;s collaborate on github</span>
             </a>
-            <a href="mailto:hi@umutcan.xyz" className="flex items-center hover:text-foreground transition-colors">
+            <a href="mailto:hi@umutcan.xyz" className="flex items-center hover:text-foreground transition-colors font-caudex">
               <ArrowUpRight className="w-3.5 h-3.5 mr-1.5" />
               <span>love to talk?</span>
             </a>

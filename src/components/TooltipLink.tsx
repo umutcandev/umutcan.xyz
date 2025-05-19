@@ -2,14 +2,16 @@
 
 import React from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { cn } from "@/lib/utils";
 
 interface TooltipLinkProps {
   text: string;
   tooltipContent: string;
   href: string;
+  className?: string;
 }
 
-export function TooltipLink({ text, tooltipContent, href }: TooltipLinkProps) {
+export function TooltipLink({ text, tooltipContent, href, className }: TooltipLinkProps) {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
@@ -17,7 +19,7 @@ export function TooltipLink({ text, tooltipContent, href }: TooltipLinkProps) {
           href={href}
           target="_blank"
           rel="noreferrer"
-          className="underline underline-offset-4 hover:text-foreground transition-colors"
+          className={cn("underline underline-offset-4 hover:text-foreground transition-colors", className)}
         >
           {text}
         </a>
